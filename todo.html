@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style/todo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="appName">
+        Todo<span class="defaultSun" id="darkLight"></span>
+      </div>
+      <div class="setTodoBlock">
+        <input placeholder="Create a new todo..." id="setTodo" /><span
+          class="checkBtnCreate"
+        ></span>
+      </div>
+      <div class="todoList">
+        <div class="filterBar">
+          <button id="filterBar__quantityOfTodo">
+            <span id="quantityOfTodo">0</span> items left
+          </button>
+          <div class="filterBar__filterList">
+            <button class="filterBar__filter filterBar__filter-active">
+              All</button
+            ><button class="filterBar__filter">Active</button
+            ><button class="filterBar__filter">Completed</button>
+          </div>
+          <button id="filterBar__clearCompleted">Clear Completed</button>
+        </div>
+      </div>
+    </div>
+    <a href="/logout" class="logout">Logout</a>
+    <script src="js/todo.js"></script>
+  </body>
+</html>

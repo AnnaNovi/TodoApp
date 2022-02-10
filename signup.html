@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expressTS</title>
+    <style>
+      body {
+        height: 100vh;
+        font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial,
+          sans-serif;
+        /* background: #3b4465; */
+        background: #53479c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .section-title div {
+        font-size: 32px;
+        letter-spacing: 1px;
+        color: #fff;
+      }
+      .section-title a {
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 3rem;
+        color: #a7e245;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .logout {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        text-decoration: underline !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section-title">
+      <div>You have successfully registered!</div>
+      <a href="/login">Login</a>
+      <div id="counter">3</div>
+    </div>
+    <script>
+      function setCounter() {
+        let counter = document.querySelector('#counter');
+        setTimeout(function () {
+          if (+counter.innerText > 0) {
+            counter.innerText = +counter.innerText - 1;
+            setCounter();
+          } else {
+            window.location.href = '/login';
+            return;
+          }
+        }, 1500);
+      }
+      setCounter();
+    </script>
+  </body>
+</html>
