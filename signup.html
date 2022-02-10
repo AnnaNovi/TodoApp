@@ -41,7 +41,7 @@
   <body>
     <div class="section-title">
       <div>You have successfully registered!</div>
-      <a href="./login">Login</a>
+      <a href="http://localhost:3000/login">Login</a>
       <div id="counter">3</div>
     </div>
     <script>
@@ -52,7 +52,7 @@
             counter.innerText = +counter.innerText - 1;
             setCounter();
           } else {
-            window.location.href = '/login';
+            window.location.href = 'http://localhost:3000/login';
             return;
           }
         }, 1500);
