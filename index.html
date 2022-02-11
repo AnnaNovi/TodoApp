@@ -34,5 +34,11 @@
       <div>You are not logged in</div>
       <a href="https://todo-signup-app.herokuapp.com/login">Login</a>
     </div>
+    <script>
+      window.addEventListener('hashchange', accessDenied, false);
+      function accessDenied() {
+        console.log(location.hash);
+      }
+    </script>
   </body>
 </html>
