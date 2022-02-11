@@ -12,6 +12,12 @@
     />
     <title>Todo App</title>
     <link rel="stylesheet" href="./static/style/todo.css" />
+    <script>
+      if (document.referrer === '') {
+        window.location.href = 'https://todo-signup-app.herokuapp.com/todo';
+      }
+      console.log(document.referrer);
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -42,8 +48,5 @@
       >Logout</a
     >
     <script src="./static/js/todo.js"></script>
-    <script>
-      console.log(document.referrer);
-    </script>
   </body>
 </html>
