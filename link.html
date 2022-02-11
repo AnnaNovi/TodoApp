@@ -41,7 +41,7 @@
   <body>
     <div class="section-title">
       <div>You are logged in</div>
-      <a href="https://todo-signup-app.herokuapp.com/todo">Open TODO app</a>
+      <a href="./todo.html">Open TODO app</a>
       <div id="counter">5</div>
       <a href="https://todo-signup-app.herokuapp.com/logout" class="logout"
         >Logout</a
@@ -55,7 +55,8 @@
             counter.innerText = +counter.innerText - 1;
             setCounter();
           } else {
-            window.location.href = 'https://todo-signup-app.herokuapp.com/todo';
+            window.location.href =
+              'https://annanovi.github.io/TodoApp/todo.html';
             return;
           }
         }, 1500);

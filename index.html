@@ -35,13 +35,11 @@
       <a href="https://todo-signup-app.herokuapp.com/login">Login</a>
     </div>
     <script>
-      (function accessDenied() {
-        if (
-          window.location.href == 'https://annanovi.github.io/TodoApp/todo.html'
-        ) {
-          window.location.href = 'https://todo-signup-app.herokuapp.com/todo';
-        }
-      })();
+      console.log(window.location.href);
+      window.addEventListener('hashchange', check, false);
+      function check() {
+        console.log(window.location.href);
+      }
     </script>
   </body>
 </html>
